@@ -6,7 +6,7 @@ function Home() {
   return (
     <section className="main-container mt-8 mb-4">
       <div className="hero-section flex justify-between bg-color-lightgreen py-[50px] pl-[76px] relative">
-        <div className="w-[650px]">
+        <div className="w-[650px] text-primary">
           <h1 className="text-5xl leading-[54px] -tracking-[1px] font-semibold mb-3">
             SEEDRA Basil Seeds for Indoor and Outdoor Planting
           </h1>
