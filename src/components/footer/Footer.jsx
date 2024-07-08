@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 function Footer() {
   return (
@@ -7,34 +7,34 @@ function Footer() {
         <div>
           <ul>
             <li>
-              <Link to={`/`}>
+              <NavLink to={`/`}>
                 all products
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to={`/`}>
+              <NavLink to={`/about`}>
                 about seedra
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to={`/`}>
+              <NavLink to={`/blog`}>
                 our block
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to={`/`}>
-                <img src="../assets" alt="logo" />
-              </Link>
+              <NavLink to={`/`}>
+                <img src="../assets/logo.svg" alt="logo" />
+              </NavLink>
             </li>
             <li>
-              <Link to={`/`}>
+              <NavLink to={`/terms`}>
                 Terms&Conditions
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to={`/`}>
+              <NavLink to={`/policy`}>
                 Privacy Policy
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
