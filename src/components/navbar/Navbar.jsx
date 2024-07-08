@@ -101,7 +101,7 @@ function Navbar() {
                 </div>
               </div>
               <div className="center">
-                <label className="input input-bordered rounded-full  flex items-center gap-2 max-w-[285px]">
+                <label className="input input-bordered rounded-full bg-white  flex items-center gap-2 max-w-[285px]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"
