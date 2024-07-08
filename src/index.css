@@ -30,8 +30,9 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #FFFFFF;
+
     /* Root element foni ham oq rangda */
-    .text-primary{
+    .text-primary {
         @apply text-[#1F2533]
     }
 }
@@ -46,4 +47,8 @@ body {
 .bg-color-lightgreen {
     background-color: #EAF1EB;
     border-radius: 24px;
+}
+
+button {
+    border: none;
 }
