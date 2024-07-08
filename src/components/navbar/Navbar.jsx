@@ -50,21 +50,24 @@ function Navbar() {
             <div className="center">
               <ul className="flex  items-start ">
                 <NavLink to="/">
-                  <li className="pl-[16px]">ALL PRODUCTS</li>
+                  <li className="pl-[16px] text-[#0737C]">ALL PRODUCTS</li>
                 </NavLink>
                 <NavLink to="/about" className="border-s-2 ml-[16px] ">
                   <li className="pl-[16px]">ABOUT SEEDRA</li>
                 </NavLink>
-                <NavLink to="/blog" className="border-s-2 ml-[16px] ">
-                  <li className="pl-[16px]">OUR BLOG</li>
+                <NavLink
+                  to="/blog"
+                  className="border-s-2 ml-[16px] "
+                >
+                  <li className="pl-[16px] text-[#0737C]">OUR BLOG</li>
                 </NavLink>
                 <NavLink to="/contact" className="border-s-2 ml-[16px] ">
-                  <li className="pl-[16px]">CONTACTS</li>
+                  <li className="pl-[16px] text-[#0737C]">CONTACTS</li>
                 </NavLink>
               </ul>
             </div>
             <div className="right flex items-center gap-[13px]">
-              <div className="left  flex gap-2">
+              <div className="left  flex gap-[10px]">
                 <div className="insta">
                   <a href="#">
                     <svg
