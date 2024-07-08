@@ -34,7 +34,7 @@ function About() {
           />
         </div>
       </div>
-      <div className="first-section flex justify-between">
+      <div className="first-section mt-16 flex justify-between">
         <div className="w-[524px]">
           <h1 className="text-primary font-semibold text-4xl leading-[54px] mb-8">
             Seedra helps to grow fast and efficiant

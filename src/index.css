@@ -31,6 +31,9 @@ body {
     flex-direction: column;
     background-color: #FFFFFF;
     /* Root element foni ham oq rangda */
+    .text-primary{
+        @apply text-[#1F2533]
+    }
 }
 
 .sticy-footer {
