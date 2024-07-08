@@ -1,6 +1,6 @@
 function About() {
   return (
-    <div className="main-container mt-14">
+    <div className="main-container">
       <div className="block_1 h-[251px] bg-[#EAF1EB]  rounded-3xl mt-[32px]">
         <h1 className="text-primary text-5xl text-center pt-[65px] font-semibold">
           Who we are and what we do
