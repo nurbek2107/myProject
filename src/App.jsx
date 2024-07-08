@@ -1,5 +1,22 @@
-import { Button } from "@material-tailwind/react";
- 
-export default function Example() {
-  return <Button>Button</Button>;
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./pages/Home";
+import MainLayout from "./layout/MainLayout";
+
+function App() {
+  const routes = createBrowserRouter([
+    {
+      path: "/",
+      element: <MainLayout />,
+      children: [
+        {
+          index: true,
+          element: <Home />
+        }
+      ]
+    }
+  ]);
+
+  return <RouterProvider router={routes} />;
 }
+
+export default App;
