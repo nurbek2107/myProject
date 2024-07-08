@@ -32,7 +32,7 @@ function About() {
           />
         </div>
       </div>
-      <div className="first-section mt-16 flex gap-[84px] relative mt-[57px]">
+      <div className="first-section flex gap-[84px] relative mt-[57px]">
         <div className="w-[524px]">
           <h1 className="text-primary font-semibold text-4xl leading-[54px] mb-8">
             Seedra helps to grow fast and efficiant
@@ -83,11 +83,49 @@ function About() {
           />
         </div>
       </div>
-      <img
-        className="absolute top-[800px] right-0"
-        src="../assets/png/aboutbarg_2.png"
-        alt=""
-      />
+      <div className="second-section mt-24 flex gap-16 items-center">
+        <img src="../assets/png/purpleWoman.png" alt="" />
+        <div className="second-section--text">
+          <h1 className="text-primary font-semibold text-4xl mb-7">Our story</h1>
+          <p className="text-primary">
+            SEEDRA Spinach Seeds - contains 600 seeds in 2 Packs and
+            professional instructions created by PhD Helga George <br /> <br />{" "}
+            Be sure of our quality - the freshest batches of this season.
+            Non-GMO, Heirloom - our seeds were tested and have the best
+            germination ratings. <br /> Your easy growing experience is our
+            guarantee Spinach commom culinary uses: salads, soups, smoothies,
+            lasagne, pizza, pies, risotto, and more <br /> <br /> Proudly
+            sourced in the USA - our garden seeds are grown, harvested, and
+            packaged in the USA. We support local farmers and are happy to
+            produce this American-made product
+          </p>
+        </div>
+      </div>
+      <div className="final-section flex flex-col gap-20 mt-32 mb-20">
+        <h1 className="font-semibold text-4xl text-primary text-center">Meet our team</h1>
+        <div className="flex gap-[30px]">
+          <div className="flex flex-col items-center gap-4">
+            <img src="../assets/png/team1.png" alt="" />
+            <h3 className="text-primary font-semibold text-2xl text-center ">Leslie Alexander</h3>
+            <p className="font-light text-primary text-base text-center">Nursing Assistant</p>
+          </div>
+          <div className="flex flex-col items-center gap-4">
+            <img src="../assets/png/team2.png" alt="" />
+            <h3 className="text-primary font-semibold text-2xl text-center ">Robert Fox</h3>
+            <p className="font-light text-primary text-base text-center">Dog Trainer</p>
+          </div>
+          <div className="flex flex-col items-center gap-4">
+            <img src="../assets/png/team3.png" alt="" />
+            <h3 className="text-primary font-semibold text-2xl text-center ">Floyd Miles</h3>
+            <p className="font-light text-primary text-base text-center">Web Designer</p>
+          </div>
+          <div className="flex flex-col items-center gap-4">
+            <img src="../assets/png/team4.png" alt="" />
+            <h3 className="text-primary font-semibold text-2xl text-center ">Wade Warren</h3>
+            <p className="font-light text-primary text-base text-center">Medical Assistant</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
