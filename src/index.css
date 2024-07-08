@@ -2,6 +2,8 @@
 
 body {
     font-family: 'Lexend Deca', sans-serif;
+    background-color: #FFFFFF;
+    /* Butun sahifa foni oq rangda */
 }
 
 @tailwind base;
@@ -13,6 +15,8 @@ body {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    background-color: #FFFFFF;
+    /* Bu konteyner foni ham oq rangda */
 }
 
 .active {
@@ -23,9 +27,13 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #FFFFFF;
+    /* Root element foni ham oq rangda */
 }
 
 .sticy-footer {
     margin-top: auto;
     box-shadow: 0px -7px 80px 0px #BDBDBD40;
+    background-color: #FFFFFF;
+    /* Footer foni ham oq rangda */
 }
