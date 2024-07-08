@@ -23,23 +23,6 @@ function Footer() {
                 </NavLink>
               </li>
             </div>
-
-            <li>
-              <NavLink to={`/`} className='hover:text-[#359740] pr-[32px] border-r-2 border-[#4FA083]'>
-                all products
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to={`/about`} className='hover:text-[#359740]  px-8 border-r-2 border-[#4FA083]'>
-                about seedra
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to={`/blog`} className='hover:text-[#359740] pl-8'>
-                our block
-              </NavLink>
-            </li>
-
             <li className="px-[72px]">
               <NavLink to={`/`} className='hover:text-[#359740]'>
                 <img src="../assets/svg/logo.svg" alt="logo" />
