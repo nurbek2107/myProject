@@ -34,9 +34,9 @@ function Home() {
           </div>
         </div>
 
-        <div className="absolute right-0 z-10">
-          <img className="" src="../assets/png/seed-packet.png" alt="packet" />
-        </div>
+          <div className="absolute right-0 z-10">
+            <img className="" src="../assets/png/seed-packet.png" alt="packet" />
+          </div>
 
         <img
           className="absolute bottom-0 z-[1] right-0"
