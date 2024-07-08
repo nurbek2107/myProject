@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Terms from "./pages/Terms";
 import Policy from "./pages/Policy";
+import Contact from "./pages/Contact";
 
 
 // layout
@@ -37,6 +38,10 @@ function App() {
         {
           path: `/policy`,
           element: <Policy />
+        },
+        {
+          path: `/contact`,
+          element: <Contact />
         },
       ]
     }
