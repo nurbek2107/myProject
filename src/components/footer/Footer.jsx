@@ -6,6 +6,24 @@ function Footer() {
       <div className="main-container">
         <div className="w-full">
           <ul className="flex items-center border-b-2 text-sm text-[#70737C] uppercase border-[#359740] border-opacity-30 w-full pt-[31px] pb-[25px]">
+            <div className="flex">
+              <li>
+                <NavLink to={`/`} className='hover:text-[#359740] pr-[32px] border-r-2 border-[#4FA083]'>
+                  all products
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={`/about`} className='hover:text-[#359740] px-8 border-r-2 border-[#4FA083]'>
+                  about seedra
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={`/blog`} className='hover:text-[#359740] pl-8'>
+                  our block
+                </NavLink>
+              </li>
+            </div>
+
             <li>
               <NavLink to={`/`} className='hover:text-[#359740] pr-[32px] border-r-2 border-[#4FA083]'>
                 all products
@@ -21,21 +39,24 @@ function Footer() {
                 our block
               </NavLink>
             </li>
+
             <li className="px-[72px]">
               <NavLink to={`/`} className='hover:text-[#359740]'>
                 <img src="../assets/svg/logo.svg" alt="logo" />
               </NavLink>
             </li>
-            <li className="">
-              <NavLink to={`/terms`} className='hover:text-[#359740] pr-8 border-r-2 border-[#4FA083]'>
-                Terms&Conditions
-              </NavLink>
-            </li>
-            <li className="pl-8">
-              <NavLink to={`/policy`} className='hover:text-[#359740]'>
-                Privacy Policy
-              </NavLink>
-            </li>
+            <div className="flex">
+              <li className="">
+                <NavLink to={`/terms`} className='hover:text-[#359740] pr-8 border-r-2 border-[#4FA083]'>
+                  Terms&Conditions
+                </NavLink>
+              </li>
+              <li className="pl-8">
+                <NavLink to={`/policy`} className='hover:text-[#359740]'>
+                  Privacy Policy
+                </NavLink>
+              </li>
+            </div>
           </ul>
         </div>
 

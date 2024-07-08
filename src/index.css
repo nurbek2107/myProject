@@ -43,3 +43,8 @@ body {
     background-color: #FFFFFF;
     /* Footer foni ham oq rangda */
 }
+
+.bg-color-lightgreen {
+    background-color: #EAF1EB;
+    border-radius: 24px;
+}
