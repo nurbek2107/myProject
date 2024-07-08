@@ -50,20 +50,79 @@ function Navbar() {
             <div className="center">
               <ul className="flex  items-start ">
                 <NavLink to="/">
-                  <li>ALL PRODUCTS</li>
+                  <li className="pl-[16px]">ALL PRODUCTS</li>
                 </NavLink>
-                <NavLink to="/" className="border-s-4 ml-[16px] ">
-                  <li>ABOUT SEEDRA</li>
+                <NavLink to="/about" className="border-s-2 ml-[16px] ">
+                  <li className="pl-[16px]">ABOUT SEEDRA</li>
                 </NavLink>
-                <NavLink to="/" className="border-s-4 ml-[16px] ">
-                  <li>OUR BLOG</li>
+                <NavLink to="/blog" className="border-s-2 ml-[16px] ">
+                  <li className="pl-[16px]">OUR BLOG</li>
                 </NavLink>
-                <NavLink to="/" className="border-s-4 ml-[16px] ">
-                  <li>CONTACTS</li>
+                <NavLink to="/contact" className="border-s-2 ml-[16px] ">
+                  <li className="pl-[16px]">CONTACTS</li>
                 </NavLink>
               </ul>
             </div>
-            <div className="right"></div>
+            <div className="right">
+              <div className="left  flex gap-2">
+                <div className="insta">
+                  <a href="#">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 6.87578C8.27969 6.87578 6.87579 8.27969 6.87579 10C6.87579 11.7203 8.27969 13.1242 10 13.1242C11.7203 13.1242 13.1242 11.7203 13.1242 10C13.1242 8.27969 11.7203 6.87578 10 6.87578ZM19.3703 10C19.3703 8.70625 19.382 7.42422 19.3094 6.13281C19.2367 4.63281 18.8945 3.30156 17.7977 2.20469C16.6984 1.10547 15.3695 0.765623 13.8695 0.692967C12.5758 0.620311 11.2938 0.63203 10.0023 0.63203C8.7086 0.63203 7.42657 0.620311 6.13516 0.692967C4.63516 0.765623 3.30391 1.10781 2.20704 2.20469C1.10782 3.3039 0.767973 4.63281 0.695317 6.13281C0.622661 7.42656 0.634379 8.70859 0.634379 10C0.634379 11.2914 0.622661 12.5758 0.695317 13.8672C0.767973 15.3672 1.11016 16.6984 2.20704 17.7953C3.30625 18.8945 4.63516 19.2344 6.13516 19.307C7.42891 19.3797 8.71094 19.368 10.0023 19.368C11.2961 19.368 12.5781 19.3797 13.8695 19.307C15.3695 19.2344 16.7008 18.8922 17.7977 17.7953C18.8969 16.6961 19.2367 15.3672 19.3094 13.8672C19.3844 12.5758 19.3703 11.2937 19.3703 10ZM10 14.807C7.33985 14.807 5.19297 12.6602 5.19297 10C5.19297 7.33984 7.33985 5.19297 10 5.19297C12.6602 5.19297 14.807 7.33984 14.807 10C14.807 12.6602 12.6602 14.807 10 14.807ZM15.0039 6.11875C14.3828 6.11875 13.8813 5.61719 13.8813 4.99609C13.8813 4.375 14.3828 3.87344 15.0039 3.87344C15.625 3.87344 16.1266 4.375 16.1266 4.99609C16.1268 5.14357 16.0978 5.28964 16.0415 5.42593C15.9851 5.56222 15.9024 5.68606 15.7982 5.79034C15.6939 5.89463 15.57 5.97731 15.4338 6.03367C15.2975 6.09002 15.1514 6.11893 15.0039 6.11875Z"
+                        fill="#70737C"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div className="fesbook">
+                  <a href="#">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0 10.0558C0 15.0275 3.61083 19.1617 8.33333 20V12.7775H5.83333V10H8.33333V7.7775C8.33333 5.2775 9.94417 3.88917 12.2225 3.88917C12.9442 3.88917 13.7225 4 14.4442 4.11083V6.66667H13.1667C11.9442 6.66667 11.6667 7.2775 11.6667 8.05583V10H14.3333L13.8892 12.7775H11.6667V20C16.3892 19.1617 20 15.0283 20 10.0558C20 4.525 15.5 0 10 0C4.5 0 0 4.525 0 10.0558Z"
+                        fill="#70737C"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div className="center">
+                <label className="input input-bordered  flex items-center gap-2">
+                  <input
+                    type="text"
+                    className="grow outline-none"
+                    placeholder="Search"
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                    className="h-4 w-4 opacity-70 "
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </label>
+              </div>
+              <div className="right"></div>
+            </div>
           </div>
         </div>
       </nav>
