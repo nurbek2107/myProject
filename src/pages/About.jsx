@@ -1,5 +1,3 @@
-import React from 'react'
-
 function About() {
   return (
     <div className="main-container mt-14">
@@ -57,5 +55,4 @@ function About() {
     </div>  
   )
 }
-
-export default About
+export default About;

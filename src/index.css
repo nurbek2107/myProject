@@ -31,7 +31,12 @@ body {
     flex-direction: column;
     background-color: #FFFFFF;
     /* Root element foni ham oq rangda */
+<<<<<<< HEAD
     .text-primary{
+=======
+
+    .text-primary {
+>>>>>>> 330dfec87f24e8a1a83f50fa99e8fa1354203012
         @apply text-[#1F2533]
     }
 }
