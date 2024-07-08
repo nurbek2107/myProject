@@ -3,7 +3,7 @@ function About() {
     <div className="main-container mt-14">
       <div className="block_1 h-[251px] bg-[#EAF1EB]  rounded-3xl mt-[32px]">
         <h1 className="text-[#1F2533] text-5xl text-center pt-[65px] font-semibold">
-          Welcome to our blog
+          Who we are and what we do
         </h1>
         <p className="m-auto text-center mt-[12px] w-[560px] text-[#1F2533]">
           Here you can find a lot of interesting and useful information that you
@@ -52,7 +52,7 @@ function About() {
         </div>
         <img src="../assets/png/farmerFemale.png" alt="" />
       </div>
-    </div>  
-  )
+    </div>
+  );
 }
 export default About;
