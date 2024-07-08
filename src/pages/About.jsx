@@ -2,10 +2,10 @@ function About() {
   return (
     <div className="main-container mt-14">
       <div className="block_1 h-[251px] bg-[#EAF1EB]  rounded-3xl mt-[32px]">
-        <h1 className="text-[#1F2533] text-5xl text-center pt-[65px] font-semibold">
+        <h1 className="text-primary text-5xl text-center pt-[65px] font-semibold">
           Who we are and what we do
         </h1>
-        <p className="m-auto text-center mt-[12px] w-[560px] text-[#1F2533]">
+        <p className="m-auto text-center mt-[12px] w-[560px] text-primary">
           Here you can find a lot of interesting and useful information that you
           need in gardening and creating a beautiful garden
         </p>
