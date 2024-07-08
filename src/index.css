@@ -1,14 +1,16 @@
 @import url(https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap);
 
-body {
-    font-family: 'Lexend Deca', sans-serif;
-    background-color: #FFFFFF;
-    /* Butun sahifa foni oq rangda */
-}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: #FFFFFF;
+
+    /* Butun sahifa foni oq rangda */
+}
 
 .main-container {
     max-width: 1107px;

@@ -12,7 +12,7 @@ function Footer() {
               </NavLink>
             </li>
             <li>
-              <NavLink to={`/about`} className='hover:text-[#359740] px-8 border-r-2 border-[#4FA083]'>
+              <NavLink to={`/about`} className='hover:text-[#359740]  px-8 border-r-2 border-[#4FA083]'>
                 about seedra
               </NavLink>
             </li>
