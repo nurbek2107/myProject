@@ -23,7 +23,7 @@ function Footer() {
             </li>
             <li className="px-[72px]">
               <NavLink to={`/`} className='hover:text-[#359740]'>
-                <img src="../assets/logo.svg" alt="logo" />
+                <img src="../assets/svg/logo.svg" alt="logo" />
               </NavLink>
             </li>
             <li className="">
@@ -42,11 +42,11 @@ function Footer() {
         <div className="flex justify-between py-[19px] items-center">
           <div className="flex gap-6 items-center">
             <Link to={`https://www.instagram.com`}>
-              <img src="../assets/instagram-logo.svg" alt="instagram" />
+              <img src="../assets/svg/instagram-logo.svg" alt="instagram" />
             </Link>
 
             <Link to={`https://www.facebook.com`}>
-              <img src="../assets/facebook-logo.svg" alt="facebook" />
+              <img src="../assets/svg/facebook-logo.svg" alt="facebook" />
             </Link>
           </div>
 
