@@ -37,7 +37,7 @@ function About() {
           <h1 className="text-primary font-semibold text-4xl leading-[54px] mb-8">
             Seedra helps to grow fast and efficiant
           </h1>
-          <p className="text-primary">
+          <p className="text-primary text-base font-light leading-7">
             SEEDRA Spinach Seeds - contains 600 seeds in 2 Packs and
             professional instructions created by PhD Helga George <br /> <br />{" "}
             Be sure of our quality - the freshest batches of this season.
@@ -72,7 +72,7 @@ function About() {
             alt=""
           />
           <img
-            className="absolute -bottom-28 right-[380px]"
+            className="absolute -bottom-20 right-[380px]"
             src="../assets/png/aboutbarg_5.png"
             alt=""
           />
@@ -87,7 +87,7 @@ function About() {
         <img src="../assets/png/purpleWoman.png" alt="" />
         <div className="second-section--text">
           <h1 className="text-primary font-semibold text-4xl mb-7">Our story</h1>
-          <p className="text-primary">
+          <p className="text-primary text-base font-light leading-7">
             SEEDRA Spinach Seeds - contains 600 seeds in 2 Packs and
             professional instructions created by PhD Helga George <br /> <br />{" "}
             Be sure of our quality - the freshest batches of this season.

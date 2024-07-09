@@ -59,7 +59,7 @@ function Home() {
           <img className="absolute top-0 right-[120px]" src="../assets/png/danak-home.png" alt="img" />
 
         </div>
-
+    
       </section>
 
       <section className='mb-[89px]'>
