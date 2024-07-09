@@ -8,6 +8,7 @@ function FormInput({labelText, type, name,placeholder}) {
             type={type}
             name={name}
             placeholder={placeholder}
+            required
             className={`input input-bordered w-full bg-transparent`}          />
         </label>
     );

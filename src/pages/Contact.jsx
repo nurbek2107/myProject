@@ -1,12 +1,15 @@
-import { Textarea } from "@material-tailwind/react";
+import { Form } from "react-router-dom";
 import FormInput from "../components/FormInput";
-
+import toast from "react-hot-toast";
 function Contact() {
+  const handleSubmit = () => {
+    toast.success("We will contact you !")
+  }
   return (
     <div className="main-container">
       <div className="contact-section bg-color-lightgreen mb-40 flex justify-between mt-8">
         <div className="flex flex-col pl-14 gap-52">
-          <div className="w-[330px] pt-12 ">
+          <div className="w-[270px] pt-12 ">
             <h1 className="text-primary text-5xl font-semibold mb-4">
               Contact us
             </h1>
@@ -32,7 +35,7 @@ function Contact() {
             </a>
           </div>
         </div>
-        <form className="bg-white w-[536px] h-[482px] rounded-[30px] px-8 py-7 mr-10 mb-8 mt-8 flex flex-col gap-5">
+        <Form className="bg-white w-[536px] h-[482px] rounded-[30px] px-8 py-7 mr-10 mb-8 mt-8 flex flex-col gap-5">
           <FormInput
             labelText="Name"
             placeholder="Your Name"
@@ -52,17 +55,17 @@ function Contact() {
           <textarea className="textarea textarea-bordered bg-white resize-none" placeholder="Your Message"></textarea>
           </label>
           <div className="mt-3 flex gap-5 items-center">
-            <button className="btn btn-success bg-[#359740] text-white ">
+            <button onClick={()=>handleSubmit()} className="btn btn-success bg-[#359740] text-white ">
               Send request
             </button>
             <p className="text-sm">
               By sending request you agree to <br /> out {" "}
-              <a className="link" href="">
+              <a className="link" href="/">
                 Pivacy&Policy
               </a>
             </p>
           </div>
-        </form>
+        </Form>
       </div>
     </div>
   );
