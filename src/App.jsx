@@ -8,7 +8,7 @@ import Blog from "./pages/Blog";
 import Terms from "./pages/Terms";
 import Policy from "./pages/Policy";
 import Contact from "./pages/Contact";
-
+import CheckoutPage from "./pages/CheckoutPage";
 
 // layout
 import MainLayout from "./layout/MainLayout";
@@ -42,6 +42,10 @@ function App() {
         {
           path: `/contact`,
           element: <Contact />
+        },
+        {
+          path: `/checkoutpage`,
+          element: <CheckoutPage/>
         },
       ]
     }

@@ -1,6 +1,6 @@
-function FormInput({labelText, type, name,placeholder}) {
+function FormInput({labelText, type, name,placeholder,width}) {
     return (
-        <label className="form-control w-full ">
+        <label className="form-control w-full">
           <div className="label">
             <span className="text-lg font-mono">{labelText}</span>
           </div>
@@ -9,7 +9,7 @@ function FormInput({labelText, type, name,placeholder}) {
             name={name}
             placeholder={placeholder}
             required
-            className={`input input-bordered w-full bg-transparent`}          />
+            className={`input input-bordered w-full ${width} bg-transparent`}          />
         </label>
     );
   }
