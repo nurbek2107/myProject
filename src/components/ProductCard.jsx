@@ -66,7 +66,7 @@ function ProductCard({ data }) {
 
   const handleSwitch = (item) => {
     localStorage.setItem("selectedItem", JSON.stringify(item));
-    
+
 
   };
 
@@ -107,6 +107,7 @@ function ProductCard({ data }) {
                         </button>
                       </div>
                     </div>
+
 
                     <div>
                       <div className="flex items-center gap-5 font-bold text-blue-gray-500">

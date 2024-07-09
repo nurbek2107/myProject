@@ -8,8 +8,10 @@ import Blog from "./pages/Blog";
 import Terms from "./pages/Terms";
 import Policy from "./pages/Policy";
 import Likes from "./pages/Likes";
+import Cart from "./pages/Cart";
 import Contact from "./pages/Contact";
-import SinglePrudact from "./pages/SinglePrudact"
+import CheckoutPage from "./pages/CheckoutPage";
+import SinglePrudact from "./pages/SinglePrudact";
 
 // layout
 import MainLayout from "./layout/MainLayout";
@@ -42,11 +44,23 @@ function App() {
         },
         {
           path: `/contact`,
-          element: <Contact />,
+          element: <Contact />
         },
         {
           path: `/likes`,
           element: <Likes />,
+        },
+        {
+          path: `/cart`,
+          element: <Cart />,
+        },
+        {
+          path: `/checkoutpage`,
+          element: <CheckoutPage />,
+        },
+        {
+          path: `/likes`,
+          element: <Likes />
         },
         {
           path: `/SinglePage`,
