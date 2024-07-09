@@ -10,7 +10,7 @@ import Policy from "./pages/Policy";
 import Likes from "./pages/Likes";
 import Contact from "./pages/Contact";
 import CheckoutPage from "./pages/CheckoutPage";
-import SinglePrudact from "./pages/SinglePrudact"
+import SinglePrudact from "./pages/SinglePrudact";
 
 // layout
 import MainLayout from "./layout/MainLayout";
@@ -46,23 +46,16 @@ function App() {
           element: <Contact />,
         },
         {
-<<<<<<< HEAD
           path: `/checkoutpage`,
-          element: <CheckoutPage/>
+          element: <CheckoutPage />,
         },
-      ]
-    }
-=======
-          path: `/likes`,
-          element: <Likes />,
-        },
+        { path: `/likes`, element: <Likes /> },
         {
           path: `/SinglePage`,
           element: <SinglePrudact />,
         },
       ],
     },
->>>>>>> 90b627c203805333c4bb0a2addc4ab46f8ddb92b
   ]);
 
   return <RouterProvider router={routes} />;
