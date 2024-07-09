@@ -49,11 +49,11 @@ function Blog() {
           </svg>
           <input type="text" className="grow " placeholder="Search" />
         </label>
-        <div className="dropdown ">
+        <div className="dropdown  z-50">
           <div
             tabIndex={0}
             role="button"
-            className="btn m-1 bg-white border  hover:bg-white border-white hover:border-white w-[258px]  rounded-full  h-[63px] flex  justify-between"
+            className="btn m-1 bg-white border  hover:bg-white border-white hover:border-white w-[258px] z-50  rounded-full  h-[63px] flex  justify-between"
           >
             <div className=" flex flex-col text-left gap-2">
               <p className="text-xs  ">Dropdown </p>
@@ -314,7 +314,7 @@ function Blog() {
         </div>
         <div className="right">
           <div className="bg-[#EAF1EB] rounded-3xl w-[350px] h-[649px] relative mt-8">
-            <div className=" z-50">
+            <div className=" z-20">
               <div className="z-10 p-8 relative">
                 <div className="flex items-center gap-2">
                   <svg
@@ -351,7 +351,7 @@ function Blog() {
             </div>
           </div>
           <div className="bg-[#EAF1EB] rounded-3xl w-[350px] h-[300px] relative mt-8">
-            <div className=" z-50">
+            <div className=" z-40">
               <div className="z-10 p-8 relative">
                 <div className="flex items-center gap-2">
                   <svg
