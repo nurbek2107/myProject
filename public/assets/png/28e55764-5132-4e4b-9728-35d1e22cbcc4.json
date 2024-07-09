@@ -1,0 +1,8 @@
+[
+  {
+    "critical": true,
+    "text": "Unexpected end of JSON input",
+    "info": {},
+    "type": "ERR_BAD_JSON_UPLOADED"
+  }
+]

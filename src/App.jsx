@@ -7,8 +7,10 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Terms from "./pages/Terms";
 import Policy from "./pages/Policy";
+import Likes from "./pages/Likes";
 import Contact from "./pages/Contact";
 import CheckoutPage from "./pages/CheckoutPage";
+import SinglePrudact from "./pages/SinglePrudact"
 
 // layout
 import MainLayout from "./layout/MainLayout";
@@ -21,34 +23,46 @@ function App() {
       children: [
         {
           index: true,
-          element: <Home />
+          element: <Home />,
         },
         {
           path: `/about`,
-          element: <About />
+          element: <About />,
         },
         {
           path: `/blog`,
-          element: <Blog />
+          element: <Blog />,
         },
         {
           path: `/terms`,
-          element: <Terms />
+          element: <Terms />,
         },
         {
           path: `/policy`,
-          element: <Policy />
+          element: <Policy />,
         },
         {
           path: `/contact`,
-          element: <Contact />
+          element: <Contact />,
         },
         {
+<<<<<<< HEAD
           path: `/checkoutpage`,
           element: <CheckoutPage/>
         },
       ]
     }
+=======
+          path: `/likes`,
+          element: <Likes />,
+        },
+        {
+          path: `/SinglePage`,
+          element: <SinglePrudact />,
+        },
+      ],
+    },
+>>>>>>> 90b627c203805333c4bb0a2addc4ab46f8ddb92b
   ]);
 
   return <RouterProvider router={routes} />;
