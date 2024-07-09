@@ -8,12 +8,8 @@ import Blog from "./pages/Blog";
 import Terms from "./pages/Terms";
 import Policy from "./pages/Policy";
 import Contact from "./pages/Contact";
-<<<<<<< HEAD
 import Likes from "./pages/Likes";
-
-=======
-import Product from "./pages/Product"
->>>>>>> 92807aa5ae07477a45a3c6984f1bdb27f4f91d23
+import Cart from "./pages/Cart";
 
 // layout
 import MainLayout from "./layout/MainLayout";
@@ -46,19 +42,15 @@ function App() {
         },
         {
           path: `/contact`,
-<<<<<<< HEAD
           element: <Contact />
-        }, 
-        {
-          path: `/likes`,
-          element: <Likes />
-=======
-          element: <Contact />,
->>>>>>> 92807aa5ae07477a45a3c6984f1bdb27f4f91d23
         },
         {
-          path: `/product`,
-          element: <Product />,
+          path: `/likes`,
+          element: <Likes />,
+        },
+        {
+          path: `/cart`,
+          element: <Cart />,
         },
       ],
     },

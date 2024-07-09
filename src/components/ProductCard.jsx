@@ -8,6 +8,7 @@ import toast from 'react-hot-toast';
 
 function ProductCard({ data }) {
   const [checkedItems, setCheckedItems] = useState({});
+  const [selectedItems, setSelectedItems] = useState([]);
   const { liked, setLiked } = useGlobalContext();
   const [allRating, setAllRating] = useState(123);
   const [rated, setRated] = useState(4);
@@ -15,25 +16,40 @@ function ProductCard({ data }) {
   useEffect(() => {
     const storedLikes = JSON.parse(localStorage.getItem('likes')) || [];
     setLiked(storedLikes);
+
+    const storedSelectedItems = JSON.parse(localStorage.getItem('selectedItems')) || [];
+    setSelectedItems(storedSelectedItems);
+    const initialCheckedItems = {};
+    storedSelectedItems.forEach(item => {
+      initialCheckedItems[item.id] = true;
+    });
+    setCheckedItems(initialCheckedItems);
   }, [setLiked]);
 
-  const handleCheck = (id) => {
-    setCheckedItems(prevState => ({
-      ...prevState,
-      [id]: !prevState[id]
-    }));
+  const handleCheck = (item) => {
+    setCheckedItems(prevState => {
+      const newCheckedItems = { ...prevState, [item.id]: !prevState[item.id] };
+      const newSelectedItems = newCheckedItems[item.id]
+        ? [...selectedItems, item]
+        : selectedItems.filter(selectedItem => selectedItem.id !== item.id);
+      setSelectedItems(newSelectedItems);
+      console.log(newCheckedItems);
+      localStorage.setItem('selectedItems', JSON.stringify(newSelectedItems));
+      toast.success(`Product ${newCheckedItems[item.id] ? 'added to' : 'removed from'} cart`);
+      return newCheckedItems;
+    });
   }
 
-  const handleLiked = (id, obj) => {
+  const handleLiked = (obj) => {
     setLiked(prevLiked => {
       let updatedLikes;
-      if (prevLiked.includes(id)) {
-        updatedLikes = prevLiked.filter(likedId => likedId !== id);
+      if (prevLiked.some(likedItem => likedItem.id === obj.id)) {
+        updatedLikes = prevLiked.filter(likedItem => likedItem.id !== obj.id);
       } else {
-        updatedLikes = [...prevLiked, id];
+        updatedLikes = [...prevLiked, obj];
       }
       localStorage.setItem('likes', JSON.stringify(updatedLikes));
-      toast.success(`Your product added to Likes category`)
+      toast.success(`Product ${updatedLikes.some(likedItem => likedItem.id === obj.id) ? 'added to' : 'removed from'} Likes category`);
       return updatedLikes;
     });
   }
@@ -46,7 +62,8 @@ function ProductCard({ data }) {
   return (
     <>
       {data && data.map((obj) => {
-        const isLiked = liked.includes(obj.id);
+        const isLiked = liked.some(likedItem => likedItem.id === obj.id);
+        const isChecked = checkedItems[obj.id] || false;
         return (
           <div key={obj.id} className='w-[350px] rounded-lg p-7' style={{ border: `2px solid #EFEFEF` }}>
             <div className='flex object-fill w-full'>
@@ -54,7 +71,7 @@ function ProductCard({ data }) {
                 <div className='mb-[29px]'>
                   <img className='w-[294px] h-[294px]' src={obj.image} alt={obj.text} />
                   <div className='absolute right-0 top-0'>
-                    <button onClick={() => handleLiked(obj.id, obj)} className="btn btn-circle btn-outline">
+                    <button onClick={() => handleLiked(obj)} className="btn btn-circle btn-outline">
                       {isLiked ? <FaHeart size={25} /> : <FaRegHeart size={25} />}
                     </button>
                   </div>
@@ -76,8 +93,8 @@ function ProductCard({ data }) {
                     <p className='font-semibold text-[28px] text-[#1F2533]'>
                       {obj.price}$
                     </p>
-                    <IconButton onClick={() => handleCheck(obj.id)} className='p-2'>
-                      {checkedItems[obj.id] ? <FaCheckCircle className='text-[#359740]' size={22} /> : <AiOutlineShoppingCart size={22} />}
+                    <IconButton onClick={() => handleCheck(obj)} className='p-2'>
+                      {isChecked ? <FaCheckCircle className='text-[#359740]' size={22} /> : <AiOutlineShoppingCart size={22} />}
                     </IconButton>
                   </div>
                 </div>
