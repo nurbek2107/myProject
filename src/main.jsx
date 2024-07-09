@@ -4,11 +4,14 @@ import App from "./App.jsx";
 import "./index.css";
 import { ThemeProvider } from "@material-tailwind/react";
 import { Toaster } from "react-hot-toast";
+import GlobalContextProvider from "./context/GlobalContext.jsx";
+
+
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <ThemeProvider>
+  <ThemeProvider>
+    <GlobalContextProvider>
       <App />
-      <Toaster/>
-    </ThemeProvider>
-  </React.StrictMode>
+      <Toaster />
+    </GlobalContextProvider>
+  </ThemeProvider>
 );

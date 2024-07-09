@@ -8,6 +8,7 @@ import Blog from "./pages/Blog";
 import Terms from "./pages/Terms";
 import Policy from "./pages/Policy";
 import Contact from "./pages/Contact";
+import Likes from "./pages/Likes";
 
 
 // layout
@@ -42,6 +43,10 @@ function App() {
         {
           path: `/contact`,
           element: <Contact />
+        }, 
+        {
+          path: `/likes`,
+          element: <Likes />
         },
       ]
     }
