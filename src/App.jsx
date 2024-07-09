@@ -7,8 +7,9 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Terms from "./pages/Terms";
 import Policy from "./pages/Policy";
+import Likes from "./pages/Likes";
 import Contact from "./pages/Contact";
-import Product from "./pages/SinglePrudact"
+import SinglePrudact from "./pages/SinglePrudact"
 
 // layout
 import MainLayout from "./layout/MainLayout";
@@ -44,8 +45,12 @@ function App() {
           element: <Contact />,
         },
         {
-          path: `/product`,
-          element: <Product />,
+          path: `/likes`,
+          element: <Likes />,
+        },
+        {
+          path: `/SinglePage`,
+          element: <SinglePrudact />,
         },
       ],
     },
