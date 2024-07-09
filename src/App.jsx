@@ -8,7 +8,7 @@ import Blog from "./pages/Blog";
 import Terms from "./pages/Terms";
 import Policy from "./pages/Policy";
 import Contact from "./pages/Contact";
-import Product from "./pages/Product"
+import Product from "./pages/SinglePrudact"
 
 // layout
 import MainLayout from "./layout/MainLayout";

@@ -145,7 +145,6 @@ function Navbar() {
                   </svg>
                 </button>
                 <button>
-                  <NavLink to="/product">
                     <svg
                       width="24"
                       height="24"
@@ -166,7 +165,6 @@ function Navbar() {
                         fill="#359740"
                       />
                     </svg>
-                  </NavLink>
                 </button>
               </div>
             </div>
