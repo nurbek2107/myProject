@@ -8,7 +8,7 @@ function Contact() {
   return (
     <div className="main-container">
       <div className="contact-section bg-color-lightgreen mb-40 flex justify-between mt-8">
-        <div className="flex flex-col pl-14 gap-52">
+        <div className="flex flex-col pl-14 gap-44">
           <div className="w-[270px] pt-12 ">
             <h1 className="text-primary text-5xl font-semibold mb-4">
               Contact us
