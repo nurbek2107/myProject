@@ -8,7 +8,7 @@ import Blog from "./pages/Blog";
 import Terms from "./pages/Terms";
 import Policy from "./pages/Policy";
 import Contact from "./pages/Contact";
-
+import Product from "./pages/Product"
 
 // layout
 import MainLayout from "./layout/MainLayout";
@@ -21,30 +21,34 @@ function App() {
       children: [
         {
           index: true,
-          element: <Home />
+          element: <Home />,
         },
         {
           path: `/about`,
-          element: <About />
+          element: <About />,
         },
         {
           path: `/blog`,
-          element: <Blog />
+          element: <Blog />,
         },
         {
           path: `/terms`,
-          element: <Terms />
+          element: <Terms />,
         },
         {
           path: `/policy`,
-          element: <Policy />
+          element: <Policy />,
         },
         {
           path: `/contact`,
-          element: <Contact />
+          element: <Contact />,
         },
-      ]
-    }
+        {
+          path: `/product`,
+          element: <Product />,
+        },
+      ],
+    },
   ]);
 
   return <RouterProvider router={routes} />;

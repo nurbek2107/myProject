@@ -13,11 +13,8 @@
     "@material-tailwind/react": "^2.1.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
-    "react-icons": "^5.2.1",
-=======
     "react-hot-toast": "^2.4.1",
->>>>>>> bd43cc93ec5413303de69e0c65a4dc6faa22d010
+    "react-icons": "^5.2.1",
     "react-router-dom": "^6.24.1"
   },
   "devDependencies": {
