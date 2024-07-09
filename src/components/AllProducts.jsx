@@ -6,7 +6,9 @@ import { useFetch } from '../hooks/useFetch';
 import ProductCard from './ProductCard';
 
 function AllProducts() {
-    const { data, isPending, error } = useFetch(`https://run.mocky.io/v3/ee534a3c-c22a-4d65-99b6-f2e10926b276`);
+    const { data, isPending, error } = useFetch(
+      `https://run.mocky.io/v3/7a4b2269-65dc-44e7-9e90-748076e5f82d`
+    );
 
     console.log(data?.data);
 

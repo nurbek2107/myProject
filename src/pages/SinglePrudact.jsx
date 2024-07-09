@@ -1,73 +1,77 @@
-import React from "react";
-import "../index.css"
+import React, { useState, useEffect } from "react";
+import "../index.css";
 import { Breadcrumbs } from "@material-tailwind/react";
+
 function SinglePrudact() {
-     const data = [
-       {
-         imgelink:
-           "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-       },
-       {
-         imgelink:
-           "https://images.unsplash.com/photo-1432462770865-65b70566d673?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-       },
-       {
-         imgelink:
-           "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
-       },
-       {
-         imgelink:
-           "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
-       },
-       {
-         imgelink:
-           "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
-       },
-    ];
-      const [active, setActive] = React.useState(
-        "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-      );
+  const [itemData, setItemData] = useState(null);
+  const [active, setActive] = useState("");
+
+  useEffect(() => {
+    const storedItem = JSON.parse(localStorage.getItem("selectedItem"));
+    if (storedItem) {
+      setItemData(storedItem);
+      setActive(storedItem.image); // Assuming the image field contains the main image link
+    }
+  }, []);
+
+  if (!itemData) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <>
-      <div className="main-container ">
-        <Breadcrumbs className="bg-white">
-          <a href="#" className="opacity-60">
-            Main
-          </a>
-          <a href="#" className="opacity-60">
-            Cataloug
-          </a>
-          <a href="#" className="opacity-60">
-            Vegetables
-          </a>
-          <a href="#" className="opacity-60">
-            Cucumber
-          </a>
-          <a href="#" className="">
-            SEEDRA
-          </a>
-        </Breadcrumbs>
-        <div>
-          <div className="grid gap-4 w-[445px]">
+      <div className="main-container">
+        <div className="flex">
+          <div className="mt-[18px]">
+            <Breadcrumbs className="bg-white">
+              <a href="#" className="opacity-60">
+                Main
+              </a>
+              <a href="#" className="opacity-60">
+                Catalog
+              </a>
+              <a href="#" className="opacity-60">
+                {itemData.typeOfPlant} {/* Example breadcrumb data */}
+              </a>
+              <a href="#" className="opacity-60">
+                {itemData.text} {/* Example breadcrumb data */}
+              </a>
+              <a href="#" className="">
+                SEEDRA
+              </a>
+            </Breadcrumbs>
             <div>
-              <img
-                className="h-auto w-full max-w-full rounded-lg object-cover object-center md:h-[480px]"
-                src={active}
-                alt=""
-              />
-            </div>
-            <div className="grid grid-cols-5 gap-4">
-              {data.map(({ imgelink }, index) => (
-                <div key={index}>
+              <div className="grid gap-4 w-[445px]">
+                <div>
                   <img
-                    onClick={() => setActive(imgelink)}
-                    src={imgelink}
-                    className="h-20 max-w-full cursor-pointer rounded-lg object-cover object-center"
-                    alt="gallery-image"
+                    className="h-auto w-full max-w-full rounded-lg object-cover object-center md:h-[480px]"
+                    src={active}
+                    alt={itemData.text}
                   />
                 </div>
-              ))}
+                <div className="grid grid-cols-5 gap-4">
+                  {itemData.additionalImages?.map((imgelink, index) => (
+                    <div key={index}>
+                      <img
+                        onClick={() => setActive(imgelink)}
+                        src={imgelink}
+                        className="h-20 max-w-full cursor-pointer rounded-lg object-cover object-center"
+                        alt={`gallery-image-${index}`}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div>
+            <h1 className="text-[#1F2533] text-2xl font-semibold  mb-4 mt-[71px]">
+              SEEDRA Corn - Bodacious Hybrid Seeds for Indoor and Outdoor
+              Planting
+            </h1>
+
+            
           </div>
         </div>
       </div>

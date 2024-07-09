@@ -16,13 +16,29 @@ function ProductCard({ data }) {
   useEffect(() => {
     const storedLikes = JSON.parse(localStorage.getItem("likes")) || [];
     setLiked(storedLikes);
+
+    const storedCheckedItems =
+      JSON.parse(localStorage.getItem("checkedItems")) || {};
+    setCheckedItems(storedCheckedItems);
+
+    const storedData = JSON.parse(localStorage.getItem("productData"));
+    if (storedData) {
+      setAllRating(storedData.allRating || 123);
+      setRated(storedData.rated || 4);
+    }
   }, [setLiked]);
 
+  useEffect(() => {
+    localStorage.setItem("likes", JSON.stringify(liked));
+    localStorage.setItem("checkedItems", JSON.stringify(checkedItems));
+  }, [liked, checkedItems]);
+
   const handleCheck = (id) => {
-    setCheckedItems((prevState) => ({
-      ...prevState,
-      [id]: !prevState[id],
-    }));
+    setCheckedItems((prevState) => {
+      const updatedCheckedItems = { ...prevState, [id]: !prevState[id] };
+      localStorage.setItem("checkedItems", JSON.stringify(updatedCheckedItems));
+      return updatedCheckedItems;
+    });
   };
 
   const handleLiked = (id) => {
@@ -42,10 +58,16 @@ function ProductCard({ data }) {
   const handleRate = (value) => {
     setRated(value);
     setAllRating((prevRating) => prevRating + value);
+    localStorage.setItem(
+      "productData",
+      JSON.stringify({ allRating: allRating + value, rated: value })
+    );
   };
 
   const handleSwitch = (item) => {
     localStorage.setItem("selectedItem", JSON.stringify(item));
+    
+
   };
 
   return (
@@ -58,7 +80,6 @@ function ProductCard({ data }) {
               <div
                 className="w-[350px] rounded-lg p-7"
                 style={{ border: `2px solid #EFEFEF` }}
-                onClick={() => handleSwitch(obj)}
               >
                 <div className="flex object-fill w-full">
                   <div className="w-full relative">
@@ -67,11 +88,13 @@ function ProductCard({ data }) {
                         className="w-[294px] h-[294px]"
                         src={obj.image}
                         alt={obj.text}
+                        onClick={() => handleSwitch(obj)}
                       />
                       <div className="absolute right-0 top-0">
                         <button
                           onClick={(e) => {
                             e.preventDefault();
+                            e.stopPropagation();
                             handleLiked(obj.id);
                           }}
                           className="btn btn-circle btn-outline"
@@ -110,6 +133,7 @@ function ProductCard({ data }) {
                         <IconButton
                           onClick={(e) => {
                             e.preventDefault();
+                            e.stopPropagation();
                             handleCheck(obj.id);
                           }}
                           className="p-2"
