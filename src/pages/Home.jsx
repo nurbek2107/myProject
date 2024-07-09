@@ -1,3 +1,4 @@
+import AllProducts from "../components/AllProducts";
 import GreenBtn from "../components/GreenBtn";
 import WhiteBtn from "../components/WhiteBtn";
 
@@ -37,7 +38,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="main-container mb-[58px] text-center">
+      <section className="main-container mb-[60px] text-center">
         <div className="w-full bg-[#fffdec] rounded-xl py-[23px] relative">
 
           <img className="absolute left-4 top-2" src="../assets/png/home-barg2.png" alt="barg" />
@@ -59,6 +60,10 @@ function Home() {
 
         </div>
 
+      </section>
+
+      <section className='mb-[89px]'>
+        <AllProducts />
       </section>
     </>
   );
