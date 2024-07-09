@@ -11,7 +11,7 @@ function Likes() {
   let likes = likesFromLocal()
 
   let likedProds = data?.data && data.data.filter((obj) => {
-    return (likes.includes(obj.id))
+    return (likes?.includes(obj.id))
   })
 
   console.log(likedProds);
