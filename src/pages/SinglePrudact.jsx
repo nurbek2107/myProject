@@ -128,7 +128,7 @@ function SinglePrudact() {
               <div className="flex gap-3 mt-[28px] items-end">
                 <p>Size</p>
                 <h1 className="text-[#1F2533] text-2xl font-semibold">
-                  2 PACK
+                  {quantity} PACK
                 </h1>
               </div>
               <div className="flex items-center gap-4 border p-2 rounded-xl">
