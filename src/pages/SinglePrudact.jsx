@@ -9,10 +9,16 @@ function SinglePrudact() {
   const basePrice = 1.56; // Assuming a base price for one pack
 
   useEffect(() => {
-    const storedItem = JSON.parse(localStorage.getItem("selectedItem"));
-    if (storedItem) {
-      setItemData(storedItem);
-      setActive(storedItem.image); // Assuming the image field contains the main image link
+    try {
+      const storedItem = JSON.parse(localStorage.getItem("selectedItem"));
+      if (storedItem) {
+        setItemData(storedItem);
+        setActive(storedItem.image); // Assuming the image field contains the main image link
+      } else {
+        console.error("No item found in localStorage");
+      }
+    } catch (error) {
+      console.error("Error parsing localStorage item:", error);
     }
   }, []);
 
@@ -159,12 +165,14 @@ function SinglePrudact() {
                         name="radio-6"
                         className="radio radio-warning "
                       />
-                      <p>{index + 1} pack</p>
+                      <p>
+                        {((index + 1) *  quantity).toFixed(0)} pack
+                      </p>
                     </div>
                     <div className="flex items-center gap-5">
                       <p>start from</p>
                       <h3 className="text-[#1F2533] text-2xl font-semibold">
-                        ${  ((index + 1) * basePrice * quantity).toFixed(2)}
+                        ${((index + 1) * basePrice * quantity).toFixed(2)}
                       </h3>
                     </div>
                   </div>

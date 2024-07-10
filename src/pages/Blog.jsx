@@ -78,18 +78,18 @@ function Blog() {
 
           <ul
             tabIndex={0}
-            className="dropdown-content menu  rounded-box z-[1]  p-2 shadow bg-white hover:bg-white border-white hover:border-white w-[258px]"
+            className="dropdown-content menu  rounded-box z-[1]  p-2 shadow bg- hover:bg-white border-white hover:border-white w-[258px]"
           >
-            <p className="bg-white hover:bg-white border-white hover:border-white text-center mt-1 cursor-pointer p-2  hover:bg-[#3597406e] rounded-sm hover:text-white">
+            <p className="bg-white  hover:border-[#3597406e] text-center mt-1 cursor-pointer p-2  hover:bg-[#3597406e]  rounded-sm hover:text-[#359740d2]">
               <a>Item 1</a>
             </p>
-            <p className="bg-white hover:bg-white border-white hover:border-white text-center mt-1 cursor-pointer p-2  hover:bg-[#3597406e] rounded-sm hover:text-white">
+            <p className="bg-white  hover:border-[#3597406e] text-center mt-1 cursor-pointer p-2  hover:bg-[#3597406e]  rounded-sm hover:text-[#359740d2]">
               <a>Item 2</a>
             </p>
-            <p className="bg-white hover:bg-white border-white hover:border-white text-center mt-1 cursor-pointer p-2  hover:bg-[#3597406e] rounded-sm hover:text-white">
+            <p className="bg-white  hover:border-[#3597406e] text-center mt-1 cursor-pointer p-2  hover:bg-[#3597406e]  rounded-sm hover:text-[#359740d2]">
               <a>Item 1</a>
             </p>
-            <p className="bg-white hover:bg-white border-white hover:border-white text-center mt-1 cursor-pointer p-2  hover:bg-[#3597406e] rounded-sm hover:text-white">
+            <p className="bg-white  hover:border-[#3597406e] text-center mt-1 cursor-pointer p-2  hover:bg-[#3597406e]  rounded-sm hover:text-[#359740d2]">
               <a>Item 2</a>
             </p>
           </ul>
