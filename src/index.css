@@ -52,3 +52,31 @@ body {
 button {
     border: none;
 }
+/* styles.css */
+.radio-custom {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.radio-custom:checked {
+  background-color: #359740; /* Your desired color */
+  border-color: #359740;
+}
+
+.radio-custom:checked::after {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
